@@ -1,0 +1,1309 @@
+/* =========================================
+   ОСНОВНЫЕ СТИЛИ (RESET)
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #0E0E0F;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   HEADER (ШАПКА)
+   ========================================= */
+.site-header {
+    background-color: white;
+    padding: 16px 0;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 32px;
+    width: auto;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #0E0E0F;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    color: #487B94;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-outline {
+    border: 1px solid #0E0E0F;
+    color: #0E0E0F;
+}
+
+.btn-outline:hover {
+    background-color: #f5f5f5;
+}
+
+.btn-primary {
+    background-color: #0E0E0F;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+}
+
+/* =========================================
+   HERO SECTION (ГЛАВНЫЙ ЭКРАН)
+   ========================================= */
+.hero {
+    background: linear-gradient(to right, #b3d4ff, #d4b3ff);
+    padding: 60px 0;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    color: #0E0E0F;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 28px;
+    padding: 6px 6px 6px 20px;
+    width: 100%;
+    max-width: 425px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.search-bar input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.search-btn {
+    background-color: #FFB3C7;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.search-btn:hover {
+    transform: scale(1.05);
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 425px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   FEATURES SECTION (ПРЕИМУЩЕСТВА - СТОЛБИКОМ)
+   ========================================= */
+/* =========================================
+   FEATURES SECTION (ПРЕИМУЩЕСТВА - 3 КОЛОНКИ)
+   ========================================= */
+.features {
+    padding: 80px 0;
+    background-color: #ffffff;
+    text-align: center; /* Центрируем всё содержимое секции */
+}
+
+/* Этот контейнер выстраивает 3 колонки в ряд */
+.features-container {
+    display: flex;              /* Используем Flexbox */
+    justify-content: center;    /* Центрируем колонки по горизонтали */
+    align-items: flex-start;    /* Выравниваем элементы по верху */
+    gap: 60px;                  /* Расстояние между колонками */
+    
+    max-width: 1200px;
+    margin: 0 auto;             /* Центрируем сам контейнер на странице */
+    padding: 0 20px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* Центрируем иконку и текст внутри колонки */
+    max-width: 300px;           /* Ограничиваем ширину, чтобы текст был компактным */
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;        /* Отступ от иконки до заголовка */
+}
+
+.feature-item h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #0E0E0F;
+}
+
+.feature-item p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555555;
+}
+
+/* Адаптив для мобильных: в столбик */
+@media (max-width: 768px) {
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Pay with Klarna Section */
+.pay-with-klarna {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #0E0E0F;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    text-align: left;
+}
+
+.card-image {
+    margin-bottom: 24px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #0E0E0F;
+}
+
+.card-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.learn-more {
+    color: #487B94;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.2s ease;
+}
+
+.learn-more:hover {
+    gap: 12px;
+}
+
+/* Адаптив для карточек */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    
+    .card {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .card-content {
+        text-align: center;
+    }
+}
+/* Partner Stores Section */
+.partner-stores {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.stores-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.stores-header h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0E0E0F;
+}
+
+.scroll-arrows {
+    font-size: 20px;
+    color: #0E0E0F;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+}
+
+.stores-grid {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.store-card {
+    flex: 1; /* Карточки занимают равную ширину */
+    border-radius: 16px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Легкая тень */
+    position: relative;
+}
+
+.card-image {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.store-card:hover .card-image img {
+    transform: scale(1.03); /* Небольшое увеличение при наведении */
+}
+
+.image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 42px; /* Крупный шрифт */
+    font-family: 'DM Serif Display', serif; /* Или любой Serif */
+    text-align: center;
+    line-height: 1.1;
+    font-weight: 400;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3); /* Тень для читаемости */
+}
+
+/* Белая плашка внизу карточки */
+.card-footer {
+    background: white;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #0E0E0F;
+    position: relative;
+    z-index: 2;
+    margin-top: -20px; /* Поднимаем плашку на картинку */
+    border-radius: 16px; /* Скругление, если нужно, но обычно плашка прямоугольная */
+}
+
+.arrow {
+    font-size: 18px;
+    color: #0E0E0F;
+}
+
+/* Подвал секции */
+.stores-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 10px; /* Небольшой отступ */
+}
+
+.view-all-link {
+    color: #487B94; /* Фирменный синий цвет Klarna */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.view-all-link:hover {
+    text-decoration: underline;
+}
+
+.disclaimer {
+    font-size: 12px;
+    color: #999;
+    margin: 0;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+    .stores-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .card-image {
+        height: 200px;
+    }
+}
+/* Card Promo Section */
+.card-promo-section {
+    padding: 40px 0 80px 0;
+    background-color: white;
+    position: relative;
+    overflow: hidden; /* Чтобы ничего не вылезало */
+}
+
+.promo-header {
+    margin-bottom: 60px;
+    padding-left: 10px; /* Выравнивание с карточками выше */
+}
+
+.promo-body {
+    display: flex;
+    justify-content: center; /* Центрируем картинку */
+    align-items: flex-end;   /* Выравниваем по низу */
+    position: relative;
+    min-height: 400px;       /* Высота блока */
+}
+
+.promo-center-image img {
+    max-width: 600px; /* Размер картинки */
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 1;
+}
+
+.promo-left-content {
+    position: absolute;
+    left: 0;
+    bottom: 80px; /* Подними или опусти кнопку, меняя это значение */
+    z-index: 2;
+}
+
+/* Розовая кнопка */
+.btn-pink {
+    display: inline-block;
+    background-color: #FFB3C7;
+    color: #0E0E0F;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 4px; /* Или 0, если квадратная */
+    transition: background-color 0.2s ease;
+}
+
+.btn-pink:hover {
+    background-color: #ff9cb6;
+}
+
+.view-all-link {
+    color: #487B94;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.disclaimer {
+    font-size: 12px;
+    color: #999;
+    margin: 0;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .promo-body {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .promo-left-content {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-bottom: 20px;
+    }
+}
+/* Get Inspired Section */
+.get-inspired {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.inspired-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.inspired-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* Картинка прижата к левому краю */
+}
+
+.inspired-image img {
+    width: 100%;
+    max-width: 450px; /* Примерный размер картинки */
+    height: auto;
+    border-radius: 20px; /* Скругление, если нужно, хотя на скрине оно специфическое из-за фона */
+}
+
+.inspired-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.inspired-content h2 {
+    font-size: 48px; /* Крупный заголовок */
+    margin-bottom: 24px;
+    color: #0E0E0F;
+    line-height: 1.1;
+}
+
+.inspired-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 32px;
+}
+
+/* Черная кнопка */
+.btn-black {
+    display: inline-block;
+    background-color: #0E0E0F;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-black:hover {
+    background-color: #333;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+    .inspired-wrapper {
+        flex-direction: column-reverse; /* На мобильном картинка сверху, текст снизу (или наоборот, по желанию) */
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .inspired-image {
+        justify-content: center;
+    }
+    
+    .inspired-content {
+        max-width: 100%;
+    }
+}
+.categories-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr !important; /* 👈 ТОЧНО 3 КОЛОНКИ */
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.category-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-image {
+  width: 100% !important;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0E0E0F;
+  text-align: center;
+}
+/* Discover Deals Section */
+.deals-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+/* Заголовок */
+.deals-header {
+    display: flex;
+    justify-content: space-between; /* Заголовок слева, стрелки справа (или можно поменять) */
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+/* Если стрелки должны быть слева под заголовком, как на скрине: */
+.deals-header {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-arrows {
+    font-size: 20px;
+    color: #000;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    color: #0E0E0F;
+}
+
+/* Сетка */
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+/* Карточка */
+.deal-card {
+    border: 1px solid #eee; /* Тонкая рамка */
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.2s ease;
+}
+
+.deal-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3; /* Пропорции картинки */
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Логотип бренда (белый кружок) */
+.brand-logo {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    line-height: 1.1;
+}
+
+/* Текст скидки 15% */
+.discount-overlay {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Инфо под картинкой */
+.card-info {
+    padding: 16px;
+}
+
+.promo-text {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.card-info h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    color: #000;
+}
+
+/* Подвал */
+.deals-footer {
+    margin-top: 10px;
+}
+
+.view-all-link {
+    color: #487B94; /* Цвет ссылок Klarna */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.disclaimer {
+    font-size: 12px;
+    color: #999;
+    margin-top: 8px;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+    .deals-grid {
+        grid-template-columns: 1fr; /* Одна колонка на телефоне */
+    }
+}
+.shop-by-category {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: left;
+    /* Можно убрать padding-left, если заголовок должен быть строго по краю контейнера */
+}
+
+/* Сетка */
+.category-icons-grid {
+    display: grid;
+    /* Ровно 5 колонок */
+    grid-template-columns: repeat(5, 1fr); 
+    /* Центрируем последний ряд, если в нем меньше элементов */
+    justify-content: center; 
+    gap: 30px; /* Расстояние между иконками */
+    
+    max-width: 1100px; /* Ограничиваем ширину, чтобы не растягивалось на весь экран */
+    margin: 0 auto;    /* Центрируем саму сетку */
+}
+
+/* Элемент сетки */
+.category-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Квадрат иконки */
+.icon-box {
+    width: 72px;  /* Фиксированный размер иконки */
+    height: 72px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    /* Убедись, что цвет фона задан верно (inline style в HTML) */
+}
+
+.icon-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Текст под иконкой */
+.category-icon-item span {
+    font-size: 13px;
+    font-weight: 500;
+    color: #0E0E0F;
+    line-height: 1.4;
+    max-width: 100px; /* Чтобы длинный текст переносился аккуратно */
+}
+
+/* Адаптив для маленьких экранов (чтобы не ломалось на телефоне) */
+@media (max-width: 900px) {
+    .category-icons-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 колонки на планшете */
+    }
+}
+
+@media (max-width: 600px) {
+    .category-icons-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на телефоне */
+    }
+}
+/* Discover Features Section */
+/* Discover Features Section */
+.discover-features {
+    padding: 80px 0;
+    background-color: white;
+    /* УБРАЛИ overflow: hidden */
+}
+
+/* Header */
+.features-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.header-left .section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.nav-arrows {
+    font-size: 20px;
+    color: #000;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.header-right p {
+    max-width: 400px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+    text-align: right;
+}
+
+/* Main Content Layout */
+.features-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Left Navigation */
+.features-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-nav li {
+    padding: 12px 0;
+    font-size: 16px;
+    color: #ccc;
+    cursor: pointer;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.features-nav li.active {
+    color: #000;
+    font-weight: 600;
+}
+
+.features-nav li:hover {
+    color: #666;
+}
+
+/* Slider Area - ГОРИЗОНТАЛЬНЫЙ СКРОЛЛ */
+.features-slider {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;        /* Горизонтальная прокрутка */
+    overflow-y: hidden;      /* Скрываем вертикальную */
+    scroll-snap-type: x mandatory; /* Прилипание карточек */
+    padding: 20px 10px 40px 10px;
+    width: 100%;
+}
+
+/* Стили скроллбара (красивые) */
+.features-slider::-webkit-scrollbar {
+    height: 8px;
+}
+
+.features-slider::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.features-slider::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.features-slider::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Feature Cards */
+.feature-card {
+    flex: 0 0 auto;          /* Не сжимать карточки */
+    min-width: 550px;        /* Фиксированная ширина */
+    background-color: #EAE8FB;
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    scroll-snap-align: start; /* Прилипание к началу */
+}
+
+.card-phone img {
+    width: 240px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.card-text {
+    max-width: 250px;
+    margin-left: 40px;
+}
+
+.card-text h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #000;
+}
+
+.card-text p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.learn-more-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Следующая карточка */
+.feature-card.next {
+    min-width: 300px;
+    justify-content: center;
+    background-color: #EAE8FB;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 900px) {
+    .features-content {
+        flex-direction: column;
+    }
+    
+    .features-nav ul {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .feature-card {
+        flex-direction: column;
+        text-align: center;
+        min-width: 100%;
+    }
+    
+    .card-text {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .header-right p {
+        text-align: left;
+        margin-top: 10px;
+    }
+}
+/* CTA Section */
+.klarna-cta {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.cta-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.cta-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.cta-content h2 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: #0E0E0F;
+}
+
+.cta-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 32px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 16px 28px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-black {
+    background-color: #0E0E0F;
+    color: white;
+    border: 2px solid #0E0E0F;
+}
+
+.btn-black:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+.btn-outline {
+    background-color: white;
+    color: #0E0E0F;
+    border: 2px solid #0E0E0F;
+}
+
+.btn-outline:hover {
+    background-color: #f5f5f5;
+}
+
+/* Картинка справа */
+.cta-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.cta-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 900px) {
+    .cta-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .cta-content {
+        max-width: 100%;
+    }
+    
+    .cta-content h2 {
+        font-size: 36px;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+    }
+}
+/* Footer */
+.site-footer {
+    background-color: #0E0E0F;
+    color: #ffffff;
+    padding: 60px 0 30px 0;
+}
+
+.footer-top {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+/* Левая часть */
+.footer-left {
+    flex: 0 0 200px;
+}
+
+.country-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.flag {
+    font-size: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff;
+    color: #0E0E0F;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+/* Колонки ссылок */
+.footer-columns {
+    display: flex;
+    flex: 1;
+    gap: 40px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 12px;
+}
+
+.footer-column a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+/* Нижняя часть */
+.footer-bottom {
+    border-top: 1px solid #333333;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+.legal-text {
+    font-size: 11px;
+    color: #888888;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom-links a {
+    color: #888888;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s;
+}
+
+.footer-bottom-links a:hover {
+    color: #ffffff;
+}
+
+/* Адаптив */
+@media (max-width: 1024px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .footer-left {
+        flex: none;
+    }
+    
+    .footer-columns {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .footer-column {
+        flex: 1 1 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
